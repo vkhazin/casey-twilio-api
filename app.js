@@ -1,6 +1,7 @@
 'use strict';
 const server                = (require('express'))();
 const bodyParser            = require('body-parser');
+const packageJson           = require('./package.json');
 
 server.use(bodyParser.json());
 
@@ -12,9 +13,7 @@ const logger                = require('./logger').create(config);
 const twilioAPI             = require('./twilioAPI').create(config, logger);
 
 server.post("/appointmentNotification", (req, res, next) => {
-  logger.info(req);
-  console.log('req.body'); 
-  console.log(req);  
+  logger.info(req); 
   twilioAPI.sendAppointmentNotification(req.body.recipientPhone, req.body.recipientName, req.body.appointmentDateTime)
     .then(response => {
       res.send(response);
@@ -27,4 +26,13 @@ server.post("/appointmentNotification", (req, res, next) => {
     })  
 });
 
+server.get("/", (req, res, next) => {
+  res.send({
+    name: packageJson.name,
+    author: packageJson.author,
+    version: packageJson.version,
+    nodeVersion: process.version
+  });
+});
+  
 server.listen(process.env.PORT || 8080);
