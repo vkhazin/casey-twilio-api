@@ -17,6 +17,7 @@ curl -X POST \
 	"recipientName": "Bob",
 	"appointmentDatetime": "2018-04-26T00:13:48+00:00"
 }'
+```
 
 ## Sample Response
 ```
