@@ -1,9 +1,15 @@
 # Casey Twilio Api
 
+## Overview
+
+* Part of a hackathon for Casey House
+* Build a secure end-point to send notifications through Twilio API
+* Deploy to two PaaS providers to demo interoperability: Pivotal Cloud Foundry and Heroku
+
 ## Deployment
 
-* User any PaaS to run the end-point
-* Make sure to populate environment variable named `config` with the content of updated ./config/config-template.json
+* Use any PaaS to deploy the end-point
+* Make sure to populate environment variable named `config` with the content of *updated* ./config/config-template.json
 
 ## Sample Request
 ```
