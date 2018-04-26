@@ -1,0 +1,31 @@
+{
+  "name": "casey-twilio-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app",
+  "scripts": {
+    "test": "clear; ./node_modules/mocha/bin/mocha",
+    "run": "node app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vkhazin/casey-twilio-api.git"
+  },
+  "keywords": [
+    "twilio"
+  ],
+  "author": "Vlad Khazin <vladimir.khazin@icssolutions.ca>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vkhazin/casey-twilio-api/issues"
+  },
+  "homepage": "https://github.com/vkhazin/casey-twilio-api#readme",
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
+    "mocha": "^5.1.1",
+    "promise": "^8.0.1",
+    "twilio": "^3.15.1"
+  }
+}
