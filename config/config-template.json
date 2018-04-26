@@ -1,0 +1,18 @@
+{
+  "log": {
+    "level": 1
+  },
+  "twilio": {
+    "username": "*replace*",
+    "password": "*replace*",
+    "fromPhoneNumber": "*replace*",
+    "appointmentFlowId": "*replace*",
+    "appointmentTemplate": "{\\\"name\\\":\\\"{toName}\\\", \\\"appointment_time\\\":\\\"{appointmentDateTime}\\\"}"
+  },
+  "acl": {
+    "headerName": "x-api-key",
+    "apiKeys": [
+      "80af8618-2a5b-43ea-a93b-270a9d18bf5c"
+    ]
+  }
+}
