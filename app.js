@@ -33,22 +33,11 @@ server.post("/appointmentNotification", (req, res, next) => {
     })  
 });
 
-/*
-    .catch(auth.NotAuthenticated, err => {
-      return respond(401, err, path, apiKey, callback);
-    })
-    .catch(auth.NotAuthorized, err => {
-      return respond(403, err, path, apiKey, callback);
-    })
-    .catch(err => {     
-      return respond(500, err, path, apiKey, callback);
-    });
-*/
-
 server.get("/", (req, res, next) => {
   res.send({
     name: packageJson.name,
     author: packageJson.author,
+    repository: packageJson.repository.url,
     version: packageJson.version,
     nodeVersion: process.version
   });
